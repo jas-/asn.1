@@ -1,4 +1,4 @@
-# ASN1.js
+# ASN.1
 
 ASN.1 DER Encoder/Decoder and DSL.
 
@@ -7,7 +7,7 @@ ASN.1 DER Encoder/Decoder and DSL.
 Define model:
 
 ```javascript
-var asn = require('asn1.js');
+var asn = require('asn.1');
 
 var Human = asn.define('Human', function() {
   this.seq().obj(
