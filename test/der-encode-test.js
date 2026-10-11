@@ -1,11 +1,11 @@
 'use strict';
-/* global describe it */
+const { describe, it } = require('node:test');
 
 const assert = require('assert');
 const asn1 = require('..');
-const BN = require('bn.js');
+const BN = require('..').bignum;
 
-const Buffer = require('safer-buffer').Buffer;
+const Buffer = require('../lib/asn1/base/safe-buffer').Buffer;
 
 describe('asn1.js DER encoder', function() {
   /*

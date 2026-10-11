@@ -1,0 +1,8 @@
+# Keep LF everywhere (scripts/lint.js rejects CRLF), including
+# Windows checkouts with core.autocrlf enabled.
+* text=auto eol=lf
+
+# DER test fixtures must never be line-ending converted.
+*.crt binary
+*.crl binary
+*.der binary

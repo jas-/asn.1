@@ -1,13 +1,13 @@
 {
   "name": "asn.1",
-  "version": "5.4.2",
+  "version": "6.0.0",
   "description": "ASN.1 encoder and decoder",
   "main": "lib/asn1.js",
   "scripts": {
-    "lint-2560": "eslint --fix rfc/2560/*.js rfc/2560/test/*.js",
-    "lint-5280": "eslint --fix rfc/5280/*.js rfc/5280/test/*.js",
-    "lint": "eslint --fix lib/*.js lib/**/*.js lib/**/**/*.js && npm run lint-2560 && npm run lint-5280",
-    "test": "mocha --reporter spec test/*-test.js && cd rfc/2560 && npm i && npm test && cd ../../rfc/5280 && npm i && npm test && cd ../../ && npm run lint"
+    "lint": "node scripts/lint.js",
+    "test-2560": "npm --prefix rfc/2560 install && npm --prefix rfc/2560 test",
+    "test-5280": "npm --prefix rfc/5280 install && npm --prefix rfc/5280 test",
+    "test": "node scripts/test.js && npm run test-2560 && npm run test-5280 && npm run lint"
   },
   "repository": {
     "type": "git",
@@ -26,10 +26,7 @@
     "url": "https://github.com/jas-/asn.1/issues"
   },
   "homepage": "https://github.com/jas-/asn.1",
-  "dependencies": {
-    "bn.js": ">=5",
-    "inherits": ">=2",
-    "minimalistic-assert": ">=1",
-    "safer-buffer": ">=2"
+  "engines": {
+    "node": ">=18"
   }
 }
