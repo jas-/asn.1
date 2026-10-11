@@ -1,5 +1,5 @@
 'use strict';
-/* global describe it */
+const { describe, it } = require('node:test');
 
 const assert = require('assert');
 const asn1 = require('..');
@@ -7,7 +7,7 @@ const bn = asn1.bignum;
 const fixtures = require('./fixtures');
 const jsonEqual = fixtures.jsonEqual;
 
-const Buffer = require('safer-buffer').Buffer;
+const Buffer = require('../lib/asn1/base/safe-buffer').Buffer;
 
 describe('asn1.js error', function() {
   describe('encoder', function() {

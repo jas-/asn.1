@@ -1,10 +1,10 @@
 'use strict';
-/* global describe it */
+const { describe, it } = require('node:test');
 
 const assert = require('assert');
 const asn1 = require('..');
 
-const Buffer = require('safer-buffer').Buffer;
+const Buffer = require('../lib/asn1/base/safe-buffer').Buffer;
 
 describe('asn1.js DER decoder', function() {
   it('should propagate implicit tag', function() {

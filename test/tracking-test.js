@@ -1,5 +1,5 @@
 'use strict';
-/* global describe it */
+const { describe, it } = require('node:test');
 
 const assert = require('assert');
 const asn1 = require('..');
@@ -38,20 +38,20 @@ describe('asn1.js tracking', function() {
 
     jsonEqual(input, decoded);
     assert.deepEqual(tracked, [
-      [ "tagged", "", 0, 20 ],
-      [ "content", "", 2, 20 ],
-      [ "tagged", "a", 4, 12 ],
-      [ "content", "a", 6, 12 ],
-      [ "tagged", "a/x", 6, 9 ],
-      [ "content", "a/x", 8, 9 ],
-      [ "tagged", "a/y", 9, 12 ],
-      [ "content", "a/y", 11, 12 ],
-      [ "tagged", "b", 12, 20 ],
-      [ "content", "b", 14, 20 ],
-      [ "tagged", "b/x", 14, 17 ],
-      [ "content", "b/x", 16, 17 ],
-      [ "tagged", "b/y", 17, 20 ],
-      [ "content", "b/y", 19, 20 ]
+      [ 'tagged', '', 0, 20 ],
+      [ 'content', '', 2, 20 ],
+      [ 'tagged', 'a', 4, 12 ],
+      [ 'content', 'a', 6, 12 ],
+      [ 'tagged', 'a/x', 6, 9 ],
+      [ 'content', 'a/x', 8, 9 ],
+      [ 'tagged', 'a/y', 9, 12 ],
+      [ 'content', 'a/y', 11, 12 ],
+      [ 'tagged', 'b', 12, 20 ],
+      [ 'content', 'b', 14, 20 ],
+      [ 'tagged', 'b/x', 14, 17 ],
+      [ 'content', 'b/x', 16, 17 ],
+      [ 'tagged', 'b/y', 17, 20 ],
+      [ 'content', 'b/y', 19, 20 ]
     ]);
   });
 });
